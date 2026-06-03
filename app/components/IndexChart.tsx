@@ -11,7 +11,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import type { PlaceItem } from "../api/place/route";
+import type { PlaceItem } from "../lib/place";
 
 interface Props {
   items: PlaceItem[];
