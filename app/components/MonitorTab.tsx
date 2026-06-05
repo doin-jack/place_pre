@@ -428,12 +428,15 @@ function HistoryCell({
             블 {snap.blogReview ?? "-"} · 방 {snap.visitorReview ?? "-"}
           </p>
           <p className="pt-0.5 font-mono text-[10px] text-blue-600">
+            <span className="mr-1 font-sans font-semibold">N1</span>
             {snap.n1 !== null ? snap.n1.toFixed(6) : "-"}
           </p>
           <p className="font-mono text-[10px] text-orange-500">
+            <span className="mr-1 font-sans font-semibold">N2</span>
             {snap.n2 !== null ? snap.n2.toFixed(6) : "-"}
           </p>
           <p className="font-mono text-[10px] text-gray-500">
+            <span className="mr-1 font-sans font-semibold">N3</span>
             {snap.n3 !== null ? snap.n3.toFixed(6) : "-"}
           </p>
         </div>
