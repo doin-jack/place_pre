@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getRegistration, listRegistrations } from "../../../lib/db";
 import { checkAndStore } from "../../../lib/monitor";
+import "../../../lib/ensure-scheduler";
 
 export const runtime = "nodejs";
 

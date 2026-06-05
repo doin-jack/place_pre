@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { analyzePlace } from "../../lib/place";
+import "../../lib/ensure-scheduler";
 
 export const runtime = "nodejs";
 

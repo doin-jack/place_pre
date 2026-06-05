@@ -35,7 +35,9 @@ const g = globalThis as unknown as { __placeMonitorDb?: DatabaseSync };
 function getDb(): DatabaseSync {
   if (g.__placeMonitorDb) return g.__placeMonitorDb;
 
-  const dataDir = path.join(process.cwd(), "data");
+  // 운영(Railway 등)에서는 영구 Volume 경로를 DATABASE_DIR로 지정한다.
+  // 미지정 시 로컬 ./data 로 폴백.
+  const dataDir = process.env.DATABASE_DIR || path.join(process.cwd(), "data");
   if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
 
   const db = new DatabaseSync(path.join(dataDir, "monitor.db"));

@@ -5,6 +5,7 @@ import {
   listRegistrations,
 } from "../../lib/db";
 import { checkAndStore, parseKeywords } from "../../lib/monitor";
+import "../../lib/ensure-scheduler";
 
 export const runtime = "nodejs";
 
